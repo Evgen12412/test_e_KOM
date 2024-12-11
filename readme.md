@@ -42,7 +42,7 @@
 #### Пример запроса
 
 ```bash
-curl -X POST -d "field1=value1&field2=value2" http://0.0.0.0:5000/get_form
+curl -X POST http://localhost:5001/get_form -d "f_name1=test@example.com&f_name2=+7 123 456 78 90" -i
 ```
 
 #### Пример ответа
