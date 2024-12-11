@@ -1,5 +1,11 @@
+import sys
+import os
 import unittest
-from app.main import app
+
+# Добавляем корневую директорию проекта в sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from app.main import app  # Абсолютный импорт
 
 
 class TestApp(unittest.TestCase):
