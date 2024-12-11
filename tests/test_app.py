@@ -1,6 +1,7 @@
 import unittest
 from app.main import app
 
+
 class TestApp(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
@@ -14,6 +15,7 @@ class TestApp(unittest.TestCase):
             self.assertEqual(response.json, {"form_name": "TestForm"})
         else:
             self.assertEqual(response.json, {"f_name1": "email", "f_name2": "phone"})
+
 
 if __name__ == '__main__':
     unittest.main()

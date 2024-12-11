@@ -6,6 +6,7 @@ from forms import get_form_template
 
 app = Flask(__name__)
 
+
 @app.route('/get_form', methods=['POST'])
 def get_form():
     data = request.form.to_dict()
@@ -18,6 +19,7 @@ def get_form():
     else:
         field_types = {field: validate_field(value) for field, value in data.items()}
         return jsonify(field_types)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
